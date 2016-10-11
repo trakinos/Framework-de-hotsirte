@@ -1,0 +1,28 @@
+#a_empresa{
+    @extend .full_relatives;
+    @extend .areas_conf;
+    background-color: $cinza_claro;
+    overflow: hidden;
+}
+
+.tempresa{
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1.6em;
+    width: 90%;
+    border-top: 3px solid $amarelo;
+    border-bottom: 3px solid $amarelo;
+    color: $cinza_escuro;
+    box-sizing: border-box;
+    padding: 30px;
+    font-family: $medium;
+}
+
+.dempresa{
+    font-size: 19px;
+    box-sizing: border-box;
+    padding: 0 50px;
+    line-height: 1.4em;
+    color: $cinza_escuro;
+    font-family: $light;
+}

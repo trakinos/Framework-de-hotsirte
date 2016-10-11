@@ -1,0 +1,18 @@
+#sobre{
+    @extend .full_relatives;
+    @extend .areas_conf;
+    overflow: hidden;
+    background-image: url('../images/sobre/faixas_sobre.png');
+    background-size: cover;
+}
+
+.desc_sobre{
+    @extend .full_relatives;
+    text-align: center;
+    p{
+        font-size: 19px;
+        color: $cinza_escuro;
+        line-height: 1.4em;
+        font-family: $light;
+    }
+}

@@ -1,0 +1,28 @@
+#banner{
+    @extend .full_relatives;
+    border-bottom: 5px solid $cinza_medio;
+    img{
+        width: 100%;
+    }
+}
+
+#fixo{
+    img{
+        vertical-align: middle;
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
+}
+
+hr.bottom_banner{
+    position: absolute;
+    height: 5px;
+    background-color: $amarelo;
+    border: 0;
+    bottom: -5px;
+    left: 50%;
+    margin: 0 auto;
+    margin-left: -60px;
+    width: 120px;
+}

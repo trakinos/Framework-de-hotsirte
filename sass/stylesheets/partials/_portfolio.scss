@@ -1,0 +1,93 @@
+#portfolio{
+    @extend .full_relatives;
+    @extend .areas_conf;
+    overflow: hidden;
+}
+
+.escondido{
+    display: none;
+}
+
+.lightbox_area{
+    @extend .full_relatives;
+}
+
+.hidden_slick{
+    display: none;
+
+}
+
+
+
+.gerenc_projetos, .arq_interiores, .compat, .gerenc_adm, .levantamento{
+  .hover_port {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(25, 25, 25, .7);
+      left: 0;
+      top: 0;
+      @include animacoes(.4s);
+      opacity: 1;
+      text-align: center;
+      .inside_port {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+        z-index: 1;
+      }
+      .img_port{
+          position: relative;
+          width: 60px;
+          height: 60px;
+          background-position: center top;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: inline-block;
+
+      }
+  }
+  p{
+      text-align: center;
+      text-transform: uppercase;
+      color: $branco;
+      width: 96%;
+      margin: 10px auto;
+      position: relative;
+      clear: both;
+      font-size: 16px;
+  }
+  &:hover{
+      .hover_port{
+        -ms-transform: scale(0.9); /* IE 9 */
+        -webkit-transform: scale(0.9); /* Safari */
+        transform: scale(0.9);
+        @include animacoes(.4s);
+        .img_port {
+          background-position: center bottom;
+        }
+      }
+      p{
+        color: $amarelo;
+      }
+  }
+}
+.gerenc_projetos .img_port {
+  background-image: url("../images/icones/servicos/gerenciamento_60.png");
+}
+.arq_interiores .img_port {
+  background-image: url("../images/icones/servicos/arquitetura_60.png");
+}
+.compat .img_port {
+  background-image: url("../images/icones/servicos/compatibilizacao_60.png");
+}
+.gerenc_adm .img_port {
+  background-image: url("../images/icones/servicos/acompanhamento_60.png");
+}
+.levantamento .img_port {
+  background-image: url("../images/icones/servicos/levantamento_60.png");
+}
+.port_serv img {
+  width: 100%;
+}

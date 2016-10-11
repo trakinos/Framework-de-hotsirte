@@ -1,0 +1,74 @@
+header#fixo {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 100;
+    background-color: #fff;
+    img.logo_topo{
+      @include animacoes(.4s);
+        margin-top: 10px;
+        height: 88px;
+    }
+    &.ativo img.logo_topo {
+      @include animacoes(.4s);
+      height: 55px;
+    }
+}
+
+a.menu_item_lk {
+    display: inline-block;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    &:hover, &.selected{
+        .menu_item{
+            color: $amarelo;
+        }
+
+        hr.hover_menu{
+            max-width: 100%;
+            margin-left: 0;
+            @include animacoes(.4s);
+        }
+    }
+}
+.menu_inside {
+  position: relative;
+  float: right;
+}
+hr.hover_menu {
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: $amarelo;
+    margin: 0 auto;
+    border: 0;
+    max-width: 0;
+    margin-left: 50%;
+}
+
+.menu_item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 45px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $cinza_escuro;
+    @include animacoes(.4s);
+    .ativo & {
+      @include animacoes(.4s);
+      padding: 30px 20px;
+    }
+}
+
+.mobile_menu{
+    display: none;
+}
+#topo_espaco {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 105px;
+}

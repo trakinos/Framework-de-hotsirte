@@ -1,0 +1,62 @@
+@mixin animacoes ($seg){
+	-webkit-transition: all $seg ease-in-out;
+	-moz-transition: all $seg ease-in-out;
+	-o-transition: all $seg ease-in-out;
+	-ms-transition: all $seg ease-in-out;
+	transition: all $seg ease-in-out;
+}
+
+.toolbar #page, .page-node-add #page {
+	margin-top: 100px;
+}
+
+.toolbar #head_parado {
+	top: 60px;
+}
+
+.full_relatives{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.lim_conteudo{
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.lim_telainteira{
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.metade_blocos{
+	position: relative;
+	width: 50%;
+	float: left;
+}
+
+.titulos{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10%;
+	p{
+		font-size: 30px;
+		color: $cinza_escuro;
+		text-transform: uppercase;
+		margin: 0;
+		display: inline-block;
+		border-bottom: 3px solid $amarelo;
+		font-family: $medium;
+	}
+}
+
+.areas_conf{
+	box-sizing: border-box;
+	padding: 90px;
+}
