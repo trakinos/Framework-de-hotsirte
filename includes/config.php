@@ -1,14 +1,14 @@
 <?php
 // Itens do Menu
-	$menu_item = array("Home", "Apartamentos", "Lazer", "Vídeo", "logo", "Galeria", "Localização", "Realização", "Contato");
+	$menu_item = array("Menu Item 1", "Menu Item 2", "Menu Item 3", "Menu Item 4");
 
 
 
 /* 	HOME MOSTRA SELECIONADA */
 	$homeselected = TRUE;
 	// DETALHES DO SITE
-	$nomedosite = "Acqua Park Alphaville";
-	$slogandosite = "Sua praia em Alphaville";
+	$nomedosite = "Nome do site";
+	$slogandosite = "Slogan do Site";
 	$caminhologo = "images/home/logo_header.png";
 	$shortcut_icon = "images/fav_icon.png";
 

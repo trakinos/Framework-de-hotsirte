@@ -26,13 +26,13 @@
 	$pagid = strtolower($titulo);
 	$pagid_final = str_replace($chars_quebrados, $chars_fixed, $pagid);
 	$div_dir = "/";
-	include_once($preendereco."includes/menu_logocentro.php");
+	include_once($preendereco."includes/break_menu_samepage.php");
 	function main_menu_print(){
 		global $preendereco;
 	    echo "<div class=\"menu\">\n";
 	    echo "<div class=\"logo_mobile_side\"><a href=\"".$preendereco."index.php\"><img alt=\"".$nomedosite."\" src=\"".$preendereco."images/base/logo_topo.png\" /></div></a>\n";
 	    echo "<div class=\"menu_inside\">\n";
-	    break_menu_fixo();
+	    break_menu();
 	    echo "</div>\n"; //menu_inside
 	    echo "</div>\n"; //menu
 	}
@@ -40,14 +40,14 @@
 		global $preendereco;
 	    echo "<div class=\"menu\">\n";
 	    echo "<div class=\"menu_inside\">\n";
-	    break_menu_fixo();
+	    break_menu();
 	    echo "</div>\n"; //menu_inside
 	    echo "</div>\n"; //menu
 	}
 	function mobile_menu_print(){
 		global $preendereco;
 	    echo "<div class=\"menu\">\n";
-	    break_menu_fixo();
+	    break_menu();
 	    echo "</div>\n"; //menu
 	}
 	function menu_inferior($array){

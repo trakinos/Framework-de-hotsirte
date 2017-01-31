@@ -19,44 +19,18 @@
 	width: 100%;
 	height: auto;
 }
-
-.lim_conteudo{
-	position: relative;
+.content {
 	width: 100%;
+	position: relative;
+	clear: both;
 	max-width: 1200px;
 	margin: 0 auto;
 }
-
-.lim_telainteira{
-	position: relative;
-	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
+.content_9 {
+	@extend .content;
+	max-width: 960px;
 }
-
-.metade_blocos{
-	position: relative;
-	width: 50%;
-	float: left;
-}
-
-.titulos{
-	position: relative;
-	width: 100%;
-	text-align: center;
-	margin-bottom: 10%;
-	p{
-		font-size: 30px;
-		color: $cinza_escuro;
-		text-transform: uppercase;
-		margin: 0;
-		display: inline-block;
-		border-bottom: 3px solid $amarelo;
-		font-family: $medium;
-	}
-}
-
-.areas_conf{
-	box-sizing: border-box;
-	padding: 90px;
+.content_7 {
+	@extend .content;
+	max-width: 720px;
 }

@@ -135,12 +135,12 @@ AIzaSyBQZeCB_UixD_V4vBoBfPe4_bgfALVKJ7Y"></script>
 		<div class="height_lim"> </div>
 		<hr class="faixahead" />
 		<div class="mobile_logob">
-			<a href="http://acquaparkalphaville.com.br/">
-				<img src="../images/logo_mobile.png" />
+			<a href="<?php echo $preendereco; ?>">
+				<img src="<?php echo $preendereco; ?>images/logo_mobile.png" />
 			</a>
 		</div>
 		<div class="mobile_menu">
-			<img src="../images/menu_mobile.png" />
+			<img src="<?php echo $preendereco; ?>images/menu_mobile.png" />
 		</div>
 		<?php main_menu_fixo_print() ?>
 	</header>
