@@ -34,3 +34,25 @@
 	@extend .content;
 	max-width: 720px;
 }
+.botao {
+	padding: 10px 15px;
+	background-color: $prim;
+	color: $sec;
+	border: 1px solid $sec;
+	&:hover {
+		color: $prim;
+		background-color: $sec;
+		border: 1px solid $prim;
+	}
+	&.inversa {
+		color: $prim;
+		background-color: $sec;
+		border: 1px solid $prim;
+		&:hover {
+			background-color: $prim;
+			color: $sec;
+			border: 1px solid $sec;
+		}
+	}
+
+}
