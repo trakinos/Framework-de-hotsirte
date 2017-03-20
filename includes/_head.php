@@ -127,7 +127,7 @@ AIzaSyBQZeCB_UixD_V4vBoBfPe4_bgfALVKJ7Y"></script>
 
 		<div class="height_lim"> </div>
 		<hr class="faixahead" />
-		<?php mobile_menu_print() ?>
+		<?php //mobile_menu_print() ?>
     <!-- <div class="mobile_open"><img src="<?php echo $preendereco ?>images/base/site-birmann-botao-moblie.png" /></div> -->
 	</header>
 
@@ -142,7 +142,7 @@ AIzaSyBQZeCB_UixD_V4vBoBfPe4_bgfALVKJ7Y"></script>
 		<div class="mobile_menu">
 			<img src="<?php echo $preendereco; ?>images/menu_mobile.png" />
 		</div>
-		<?php main_menu_fixo_print() ?>
+		<?php //main_menu_fixo_print() ?>
 	</header>
 	<div id="topo_espaco"> </div>
 	<?php // mobile_menu_print (); ?>

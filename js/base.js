@@ -1,13 +1,3 @@
-function vertmid(x, y = 0, z = "auto") {
-  if ($(window).outerWidth() > y) {
-    $(x).css("margin-top", "-" + $(x).outerHeight()/2 +"px");
-  } else {
-    $(x).css("margin-top", z);
-  }
-}
-function hormid(x) {
-  $(x).css("margin-left", "-" + $(x).outerWidth()/2 +"px");
-}
 function telaclass(x, y = 0) {
   if ($(window).outerWidth() > y) {
     $(x).css("height", ($(window).innerHeight() - 60) +"px");

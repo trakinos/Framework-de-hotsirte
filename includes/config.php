@@ -1,6 +1,10 @@
 <?php
 // Itens do Menu
-	$menu_item = array("Menu Item 1", "Menu Item 2", "Menu Item 3", "Menu Item 4");
+	$menu_item = array(
+		array("Menu Item 1", "menu/item1"),
+		array("Menu Item 2", "menu/item2"),
+		array("Menu Item 3", "menu/item3"),
+		array("Menu Item 4", "menu/item4"));
 
 
 

@@ -19,53 +19,13 @@
 	// 	}
 	// }
 
-	//include_once($preendereco."includes/menu_fixo_format.php");
-	//include_once($preendereco."includes/menu_simples.php");
+	include_once($preendereco."includes/break_menu_novo.php");
 	$chars_quebrados = array( " | ", ".", " ", "ç", "ã", "é", "õ", "í");
 	$chars_fixed = array("", "", "_", "c", "a", "e", "o", "i");
 	$pagid = strtolower($titulo);
 	$pagid_final = str_replace($chars_quebrados, $chars_fixed, $pagid);
 	$div_dir = "/";
-	include_once($preendereco."includes/break_menu_samepage.php");
-	function main_menu_print(){
-		global $preendereco;
-	    echo "<div class=\"menu\">\n";
-	    echo "<div class=\"logo_mobile_side\"><a href=\"".$preendereco."index.php\"><img alt=\"".$nomedosite."\" src=\"".$preendereco."images/base/logo_topo.png\" /></div></a>\n";
-	    echo "<div class=\"menu_inside\">\n";
-	    break_menu();
-	    echo "</div>\n"; //menu_inside
-	    echo "</div>\n"; //menu
-	}
-	function main_menu_fixo_print(){
-		global $preendereco;
-	    echo "<div class=\"menu\">\n";
-	    echo "<div class=\"menu_inside\">\n";
-	    break_menu();
-	    echo "</div>\n"; //menu_inside
-	    echo "</div>\n"; //menu
-	}
-	function mobile_menu_print(){
-		global $preendereco;
-	    echo "<div class=\"menu\">\n";
-	    break_menu();
-	    echo "</div>\n"; //menu
-	}
-	function menu_inferior($array){
-		echo "\t<div class=\"submenu\">\n";
-		$y = count($item)-1;
-		$path = strtolower($item[0]);
-    	$path_final = str_replace($chars_quebrados, $chars_fixed, $path);
-
-		$i = 0;
-		while ($i <= $y):
-			$subpath = strtolower($item[$i]);
-        	$subpath_final = str_replace($chars_quebrados, $chars_fixed, $subpath);
-        	echo "\t\t<a href=\"".$path_final.".php/".$subpath_final."\" class=\"submenu_item_lk ".$path_final."\"><div class=\"submenu_item ".$path_final."\">".$item[$i]."</div></a>\n";
-		    $i++;
-		endwhile;
-
-        echo "\t</div>\n";
-	}
+	
 
 	function footer(){
 		global $preendereco;
