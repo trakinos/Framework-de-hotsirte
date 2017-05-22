@@ -28,5 +28,4 @@ function break_menu() {
 			$menu_i_final = str_replace($placeholders, $placetakers, $menu_form);
 			echo $menu_i_final;
 		}
-
 	}

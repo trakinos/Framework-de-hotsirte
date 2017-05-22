@@ -80,43 +80,13 @@
 		    });
 	    </script>
 -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=
-AIzaSyBQZeCB_UixD_V4vBoBfPe4_bgfALVKJ7Y"></script>
 	</head>
 	<body class="<?php echo $pagid_final."_pg"; ?>">
+		<?php include_once($preendereco."includes/google_an.php"); ?>
 		<? if ($hasmap == TRUE) {
-			?>
-			<script type="text/javascript">
-			function initialize() {
-		        <?php echo "var myLatlng = new google.maps.LatLng(".$coordenadas.");" ?>
-		                var contentString = "<b><?php echo $nomedosite; ?></b>";
-		        var infowindow = new google.maps.InfoWindow({
-		            content: contentString
-
-		  });
-
-		        var mapOptions = {
-		          center: myLatlng,
-		          scrollwheel: false,
-		          zoom: 16
-		        };
-		        var image = '<?php echo $preendereco.$pinmapa; ?>';
-				var map = new google.maps.Map(document.getElementById('framemapa'),
-					mapOptions);
-				var marker = new google.maps.Marker({
-					position: myLatlng,
-					map: map,
-					title: '<?php echo $nomedosite; ?>',
-					icon: image
-				});
-		        google.maps.event.addListener(marker, 'click', function() {
-		  infowindow.open(map,marker);
-		  });
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
-		<?php }
-		include_once($preendereco."includes/google_an.php");
+			include_once($preendereco."includes/map_config.php");
+ 				}
+		include_once($preendereco."includes/tracking.php");
 		?>
 	<div id="menu_sociais">
 		<div class="bot_soc telefone_soc"> </div>

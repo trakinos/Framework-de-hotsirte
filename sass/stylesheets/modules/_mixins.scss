@@ -1,0 +1,28 @@
+@mixin animacoes ($seg){
+	-webkit-transition: all $seg ease-in-out;
+	-moz-transition: all $seg ease-in-out;
+	-o-transition: all $seg ease-in-out;
+	-ms-transition: all $seg ease-in-out;
+	transition: all $seg ease-in-out;
+}
+@mixin vertmiddle(){
+	-ms-transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+@mixin hormiddle(){
+	-ms-transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+@mixin middle(){
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
