@@ -8,7 +8,7 @@ $item$ = Nome que aparece no menu<br />
 $path_final$ = Link Final do item do menu<br />
 $selected$ = onde vai marcar como selecionado, caso seja o caso<br />
 $trab_final$ = Nome "de máquina" do item (machine friendly)
-<br />
+<br /><br />
 ********* MASONRY<br />
 Como nomear/localizar as imagens:<br />
 images/DIRETORIO/masonry/TIPODEIMAGEM/NOMEDAIMAGEM.jpg<br />
