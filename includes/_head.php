@@ -5,7 +5,14 @@
 		<link rel="icon" type="image/png" href="<?php echo $preendereco.$shortcut_icon ?>" />
 		<link rel="shortcut icon" href="<?php echo $preendereco.$shortcut_icon ?>" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;" />
+		<?php
+			if ($zoom == TRUE) {
+				echo "<meta name=\"viewport\" content=\"width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;\" />";
+			} else {
+				echo "<meta name=\"viewport\" content=\"width=100%; initial-scale=1; minimum-scale=1; user-scalable=yes;\" />";
+			}
+		 ?>
+
 		<?php
 			if (!isset($descricao) OR ($descricao = "")){
 			?>
@@ -40,9 +47,6 @@
 		<?php if ($content_lateral == TRUE) { ?>
       <link rel="stylesheet" media="screen" href="<?php echo $preendereco ?>css/content_lateral.css" type="text/css" />
 		<?php } ?>
-		<?php if ($jbgal == TRUE) { ?>
-      <link rel="stylesheet" media="screen" href="<?php echo $preendereco ?>css/jbgallery-2.0.css" type="text/css" />
-		<?php } ?>
   	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<? if ($nivoslider == TRUE) {
 			?> <script type="text/javascript" src="<?php echo $preendereco ?>js/jquery.nivo.slider.js"></script>
@@ -58,16 +62,12 @@
 
 		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="<?php echo $preendereco ?>js/base.js"></script>
-		<script type="text/javascript" src="<?php echo $preendereco ?>js/vertmiddle.js"></script>
 		<?php if ($parallax == TRUE) { ?>
-		<script type="text/javascript" src="<?php echo $preendereco ?>js/jquery.lettering-0.6.1.min.js"></script>
-		<script type="text/javascript" src="<?php echo $preendereco ?>js/jquery.scrollorama.js"></script>
+			<script type="text/javascript" src="<?php echo $preendereco ?>js/jquery.lettering-0.6.1.min.js"></script>
+			<script type="text/javascript" src="<?php echo $preendereco ?>js/jquery.scrollorama.js"></script>
 		<?php } ?>
 		<?php if ($content_lateral == TRUE) { ?>
 			<script type="text/javascript" src="<?php echo $preendereco ?>js/content_lateral.js"></script>
-		<?php } ?>
-		<?php if ($jbgal == TRUE) { ?>
-			<script type="text/javascript" src="<?php echo $preendereco ?>js/jbgallery-2.0.js"></script>
 		<?php } ?>
 <!-- 		AGÊNCIA D1UP -->
         <!--
@@ -82,11 +82,11 @@
 -->
 	</head>
 	<body class="<?php echo $pagid_final."_pg"; ?>">
-		<?php include_once($preendereco."includes/google_an.php"); ?>
-		<? if ($hasmap == TRUE) {
-			include_once($preendereco."includes/map_config.php");
- 				}
+		<?php
 		include_once($preendereco."includes/tracking.php");
+		if ($hasmap == TRUE) {
+			include_once($preendereco."includes/map_config.php");
+		}
 		?>
 	<div id="menu_sociais">
 		<div class="bot_soc telefone_soc"> </div>
@@ -94,7 +94,6 @@
 	</div>
 
 <header id="relativo">
-
 		<div class="height_lim"> </div>
 		<hr class="faixahead" />
 		<?php //mobile_menu_print() ?>

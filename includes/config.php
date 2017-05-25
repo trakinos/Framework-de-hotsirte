@@ -36,8 +36,8 @@
 	$slickcar = FALSE;
 	$lightbox = FALSE;
 	$parallax = FALSE;
+	$masonry = FALSE;
 	$content_lateral = FALSE;
-	$jbgal = FALSE;
 
 	$integracao = array();
 	// $integracao[] = "Hypnobox";

@@ -1,4 +1,7 @@
 <?php
+spl_autoload_register(function ($class_name) {
+    include $preendereco."classes/".$class_name . '.php';
+});
 	/**
 	 *
 	 */
@@ -20,12 +23,12 @@
 	// }
 
 	include_once($preendereco."includes/break_menu_novo.php");
-	$chars_quebrados = array( " | ", ".", " ", "ç", "ã", "é", "õ", "í");
-	$chars_fixed = array("", "", "_", "c", "a", "e", "o", "i");
+  $chars_quebrados = array( " | ", ".", " ", "ç", "ã", "á", "à", "é", "ê", "õ", "ó", "í", "ü");
+  $chars_fixed = array("", "", "_", "c", "a", "a", "a", "e", "e", "o", "o", "i", "u");
 	$pagid = strtolower($titulo);
 	$pagid_final = str_replace($chars_quebrados, $chars_fixed, $pagid);
 	$div_dir = "/";
-	
+
 
 	function footer(){
 		global $preendereco;
