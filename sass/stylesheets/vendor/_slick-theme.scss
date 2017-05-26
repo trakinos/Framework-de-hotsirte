@@ -170,7 +170,7 @@ $slick-opacity-not-active: 0.25 !default;
                 width: 10px;
                 height: 10px;
                 border-radius: 10px;
-                background-color: $cinza_claro;
+                // background-color: $cinza_claro;
                 font-family: $slick-font-family;
                 font-size: $slick-dot-size;
                 line-height: 20px;
@@ -182,7 +182,7 @@ $slick-opacity-not-active: 0.25 !default;
             }
         }
         &.slick-active button:before {
-            background-color: $cinza_escuro;
+            // background-color: $cinza_escuro;
             color: transparent;
             opacity: $slick-opacity-default;
         }

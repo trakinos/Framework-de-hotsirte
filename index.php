@@ -11,8 +11,12 @@ include_once("includes/_vars.php");
 
 
 <?php
-break_menu();
-$lista = array("Escritório", "Salão de Festas");
 
-$a = new MASONRY($lista);
+// $directory = $preendereco."templates/footer";
+// $files = scandir($directory);
+// var_dump($files);
+// $num_files = count($files)-2;
+
+
+// break_menu();
  include_once("includes/_footer.php");

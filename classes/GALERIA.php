@@ -1,8 +1,6 @@
 <?php
-  class MASONRY
-  {
-    function __construct($lista)
-    {
+  class GALERIA {
+    function __construct($lista) {
       global $chars_quebrados;
       global $chars_fixed;
       global $preendereco;
@@ -19,9 +17,9 @@
               $c = "home";
             }
             echo "
-            <a rel=\"lightbox[galeria]\" title='".$item."' href='".$preendereco."images/".$c."/masonry/lightbox/".$item_final.".jpg' />
+            <a rel=\"lightbox[galeria]\" title='".$item."' href='".$preendereco."images/".$c."/galeria/lightbox/".$item_final.".jpg' />
               <div class='gal_item'>
-                <img src='".$preendereco."images/".$c."/masonry/thumbs/".$item_final.".jpg' />
+                <img src='".$preendereco."images/".$c."/galeria/thumbs/".$item_final.".jpg' />
                 <div class='legenda'>
                 <p>
                 ".$item."
@@ -35,5 +33,4 @@
       echo "</section>";
     }
   }
-
  ?>

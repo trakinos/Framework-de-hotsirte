@@ -1,6 +1,8 @@
-html, body, figure{
+html, body, figure, img, ul, li, h1, h2, h3, h4, h5, hr, a, footer, header, section {
 	padding: 0;
 	margin: 0;
+	border: 0;
+	box-sizing: border-box;
 }
 a, a:hover {
 	color: inherit;

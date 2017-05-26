@@ -1,7 +1,8 @@
-.full_relatives{
+.area{
 	position: relative;
 	width: 100%;
 	height: auto;
+	overflow: hidden;
 }
 .content {
 	width: 100%;
@@ -38,4 +39,31 @@
 			border: 1px solid $sec;
 		}
 	}
+}
+.responsivo_dividido {
+  position: relative;
+  margin-right: 2%;
+  &.resp_1 {
+    width: 100%;
+    clear: both;
+  }
+  &.resp_2 {
+    width: 48%;
+    float: left;
+  }
+  &.resp_3 {
+    width: 32%;
+    float: left;
+  }
+  &.resp_4 {
+    width: 23.5%;
+    float: left;
+  }
+  &.resp_5 {
+    width: 18.4%;
+    float: left;
+  }
+  &.last {
+    margin-right: 0;
+  }
 }

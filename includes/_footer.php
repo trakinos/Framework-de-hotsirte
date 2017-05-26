@@ -1,5 +1,6 @@
-
-
+<?php
+$footer = new FOOTER;
+ ?>
 <div id="overall_300">
     <div id="overall_close_300"></div>
     <iframe class="frame_300" src=""></iframe>
