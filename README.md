@@ -27,3 +27,26 @@ Para chamar:
 $footer = new FOOTER<br />
 Na pasta /templates/footer, adicione os arquivos que serão parte do footer.
 Até 5 arquivos serão reconhecidos e dividirão automaticamente o footer para comportá-los.
+<br /><br />
+********* BOTOES DE CONVERSÃO<br />
+Para chamar:<br />
+$conv = new CONVERSAO($ESTILO$);<br />
+$conv->addButton($tipo$);<br />
+$conv = null;<br />
+<br />
+No lugar de $ESTILO$, o estilo do menu de conversão. As opções são:<br />
+- lateral<br />
+- embaixo<br />
+<br />
+No lugar de $tipo$, o estilo do menu de conversão. As opções são:<br />
+- Telefone<br />
+- Chat<br />
+- Localização<br />
+<br />
+Os botoes utilizam o template: templates/conv_item.php<br />
+as marcações são:
+$item$: Nome que vai levar o botao<br />
+$trigger$: nome da classe que sera aplicada no link
+$path_final$:Caminho para qual o link sera direcionado
+$imagem$: nome da imagem que sera usada no botao
+$preendereco$: buscara a variavel preendereco
