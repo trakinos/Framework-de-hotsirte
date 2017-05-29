@@ -46,7 +46,7 @@ No lugar de $tipo$, o estilo do menu de conversão. As opções são:<br />
 Os botoes utilizam o template: templates/conv_item.php<br />
 as marcações são:
 $item$: Nome que vai levar o botao<br />
-$trigger$: nome da classe que sera aplicada no link
-$path_final$:Caminho para qual o link sera direcionado
-$imagem$: nome da imagem que sera usada no botao
+$trigger$: nome da classe que sera aplicada no link<br />
+$path_final$:Caminho para qual o link sera direcionado<br />
+$imagem$: nome da imagem que sera usada no botao<br />
 $preendereco$: buscara a variavel preendereco
