@@ -98,7 +98,7 @@
 		<hr class="faixahead" />
 		<?php //mobile_menu_print() ?>
     <!-- <div class="mobile_open"><img src="<?php echo $preendereco ?>images/base/site-birmann-botao-moblie.png" /></div> -->
-	</header>
+</header>
 
 	<header id="fixo">
 		<div class="height_lim"> </div>

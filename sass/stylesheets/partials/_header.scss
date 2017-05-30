@@ -1,0 +1,13 @@
+header {
+  width: 100%;
+  &#relativo {
+    position: relative;
+    clear: both;
+    margin: 0;
+  }
+  &#fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}

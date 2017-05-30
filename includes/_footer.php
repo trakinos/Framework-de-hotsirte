@@ -1,6 +1,12 @@
 <?php
 $footer = new FOOTER;
+$conv = new CONVERSAO("lateral");
+$conv->addButton("Telefone");
+$conv->addButton("Chat");
+$conv->addButton("Localização");
+$conv = null;
  ?>
+
 <div id="overall_300">
     <div id="overall_close_300"></div>
     <iframe class="frame_300" src=""></iframe>

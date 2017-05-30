@@ -3,8 +3,8 @@ $titulo = "Home";
 // $diretorio = "diretorio";
 include_once("includes/config.php");
 // VARIAVEIS
-$slickcar = TRUE;
-$hasmap = TRUE;
+// $slickcar = TRUE;
+// $hasmap = TRUE;
 include_once("includes/_vars.php");
 ?>
 

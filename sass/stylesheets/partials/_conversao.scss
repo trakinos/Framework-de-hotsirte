@@ -1,0 +1,33 @@
+#conversao_lateral{
+  position: absolute;
+  right: 0;
+  .item_sidebar{
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin: 10px 0;
+    padding: 14px 10px;
+    width: 200px;
+    right: -160px;
+    @include animacoes(0.4s);
+    &:hover{
+      right: 0;
+      @include animacoes(0.4s);
+    }
+    img{
+      float: left;
+      max-width: 30px;
+      margin: 5px;
+      margin-right: 20px;
+    }
+    p{
+      position: relative;
+      float: left;
+      color: #ccc;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}
