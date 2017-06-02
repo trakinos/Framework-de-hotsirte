@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
+<head>
 		<title><?php echo $nomedosite; ?> | <?php echo $titulo; ?></title>
 		<link rel="icon" type="image/png" href="<?php echo $preendereco.$shortcut_icon ?>" />
 		<link rel="shortcut icon" href="<?php echo $preendereco.$shortcut_icon ?>" />
@@ -70,8 +70,8 @@
 			<script type="text/javascript" src="<?php echo $preendereco ?>js/content_lateral.js"></script>
 		<?php } ?>
 <!-- 		AGÊNCIA D1UP -->
-        <!--
-<script type="text/javascript">
+      <!--
+			<script type="text/javascript">
 		    $(window).load(function() {
 		        $('#inside_banner').nivoSlider({
 			        effect: 'fade',
@@ -80,38 +80,17 @@
 		    });
 	    </script>
 -->
-	</head>
-	<body class="<?php echo $pagid_final."_pg"; ?>">
-		<?php
-		include_once($preendereco."includes/tracking.php");
-		if ($hasmap == TRUE) {
-			include_once($preendereco."includes/map_config.php");
-		}
-		?>
-	<div id="menu_sociais">
-		<div class="bot_soc telefone_soc"> </div>
-		<div class="bot_soc ende_soc"> </div>
-	</div>
-
-<header id="relativo">
-		<div class="height_lim"> </div>
-		<hr class="faixahead" />
-		<?php //mobile_menu_print() ?>
-    <!-- <div class="mobile_open"><img src="<?php echo $preendereco ?>images/base/site-birmann-botao-moblie.png" /></div> -->
-</header>
-
-	<header id="fixo">
-		<div class="height_lim"> </div>
-		<hr class="faixahead" />
-		<div class="mobile_logob">
-			<a href="<?php echo $preendereco; ?>">
-				<img src="<?php echo $preendereco; ?>images/logo_mobile.png" />
-			</a>
-		</div>
-		<div class="mobile_menu">
-			<img src="<?php echo $preendereco; ?>images/menu_mobile.png" />
-		</div>
-		<?php //main_menu_fixo_print() ?>
-	</header>
+</head>
+<body class="<?php echo $pagid_final."_pg"; ?>">
+	<?php
+	include_once($preendereco."includes/tracking.php");
+	if ($hasmap == TRUE) {
+		include_once($preendereco."includes/map_config.php");
+	}
+	?>
+	<?php
+		$header = new HEADER(mobile);
+		$header -> break_menu();
+		$header = null;
+	?>
 	<div id="topo_espaco"> </div>
-	<?php // mobile_menu_print (); ?>

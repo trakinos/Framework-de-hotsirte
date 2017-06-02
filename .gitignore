@@ -1,2 +1,8 @@
 
 .ftpconfig
+
+*.scssc
+
+*.scssc
+
+.sass-cache/*

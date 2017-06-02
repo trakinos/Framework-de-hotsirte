@@ -27,7 +27,7 @@ $(document).ready(function() {
       $("#overall_end").fadeOut(500);
   });
   $("#menu_open").click(function(){
-    $(".menu").toggleClass("aberto");
+    $(".main_menu").toggleClass("aberto");
   });
 
   $('a.end_trigger').click(function (e) {

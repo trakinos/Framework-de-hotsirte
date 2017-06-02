@@ -4,10 +4,76 @@ header {
     position: relative;
     clear: both;
     margin: 0;
+    background-color: #333;
+    overflow: hidden;
+    padding: 16px 0;
+    margin-bottom: 20px;
+    #logo_topo{
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 20px;
+    }
+    nav.main_menu{
+      position: relative;
+      float: right;
+      width: auto;
+      .menu_item_lk{
+        position: relative;
+        float: left;
+        color: #fff;
+        font-size: 13px;
+        text-transform: uppercase;
+        padding: 5px;
+        margin: 10px;
+      }
+    }
   }
   &#fixo {
     position: fixed;
     top: 0;
     left: 0;
+  }
+}
+
+@media only screen and (max-width: 960px){
+  header {
+    &#relativo {
+      text-align: center;
+      position: fixed;
+      z-index: 100;
+      #logo_topo{
+        position: relative;
+        margin: 20px auto;
+        display: inline-block;
+        left: inherit;
+        top: inherit;
+      }
+      nav.main_menu{
+        float: none;
+        max-height: 0;
+        text-align: left;
+        padding-left: 30px;
+        overflow: hidden;
+        @include animacoes(0.4s);
+        &.aberto{
+          max-height: 135px;
+          @include animacoes(0.4s);
+        }
+        .menu_item_lk{
+          float: none;
+        }
+      }
+      #menu_open{
+        position: relative;
+        overflow: hidden;
+        padding: 12px 16px;
+        background-image: url("../images/menu_mobile.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: inline-block;
+      }
+    }
   }
 }
