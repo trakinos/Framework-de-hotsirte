@@ -20,7 +20,7 @@ $MOBILE_BUTTON$ = Onde o botão de abrir o menu mobile deve se posicionar<br />
 CONSTRUÇÃO<br />
 <br />
 $header = new HEADER($tipo); // $tipo pode ser mobile | relativo | fixo<br />
-// $header->mobile = FALSE; //Descomentar caso queira que o menu mobile não seja impresso.
+// $header->mobile = FALSE; //Descomentar caso queira que o menu mobile não seja impresso.<br />
 $header = null;<br />
 <br /><br />
 <hr />
