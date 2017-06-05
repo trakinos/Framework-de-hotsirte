@@ -2,13 +2,28 @@
 
 Modificar os templates para padronizar itens do site. Os templates se encontram em /templates<br />
 <br />
-********* MENU<br />
-As variáveis disponíveis no item do menu são:<br />
+********* HEADER<br />
+Alterar a variável dos itens do menu (em /includes/config.php):<br />
+3 templates são incluídos na construção do header.
+As variáveis disponíveis no item do menu (header/menu_item.php) e no logo são:<br />
 $item$ = Nome que aparece no menu<br />
 $path_final$ = Link Final do item do menu<br />
 $selected$ = onde vai marcar como selecionado, caso seja o caso<br />
 $trab_final$ = Nome "de máquina" do item (machine friendly)
 <br /><br />
+As variáveis dos templates de Header são:<br />
+$TIPO$ = Declarado na construção do header.<br />
+$PREENDERECO$ = automático com a construção da página<br />
+$MENU$ = Onde o menu deve quebrar<br />
+$MOBILE_BUTTON$ = Onde o botão de abrir o menu mobile deve se posicionar<br />
+<br /><br />
+CONSTRUÇÃO<br />
+<br />
+$header = new HEADER($tipo); // $tipo pode ser mobile | relativo | fixo<br />
+// $header->mobile = FALSE; //Descomentar caso queira que o menu mobile não seja impresso.
+$header = null;<br />
+<br /><br />
+<hr />
 ********* GALERIA<br />
 Como nomear/localizar as imagens:<br />
 images/DIRETORIO/galeria/TIPODEIMAGEM/NOMEDAIMAGEM.jpg<br />
