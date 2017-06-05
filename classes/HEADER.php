@@ -11,22 +11,20 @@
     function __construct($estilo) {
       global $preendereco;
       global $menu_item;
-      $this->template = file_get_contents($preendereco."templates/menu_item.php");
-      $this->template_h = file_get_contents($preendereco."templates/header.php");
-      $this->menu_items = $menu_item;
-      $this->estilo = $estilo;
-    }
-    public function break_menu() {
-      global $preendereco;
       global $titulo;
       global $chars_quebrados;
       global $chars_fixed;
+      $this->template = file_get_contents($preendereco."templates/header/menu_item.php");
+      $this->template_h = file_get_contents($preendereco."templates/header/header.php");
+      $this->menu_items = $menu_item;
+      $this->estilo = $estilo;
+
       foreach ($this->menu_items as $itens) {
   			$item = $itens[0];
         if ($item == "logo") {
-          $this->template = file_get_contents($preendereco."templates/menu_logo.php");
+          $this->template = file_get_contents($preendereco."templates/header/menu_logo.php");
         } else {
-          $this->template = file_get_contents($preendereco."templates/menu_item.php");
+          $this->template = file_get_contents($preendereco."templates/header/menu_item.php");
         }
   			if (($item == $titulo) OR (($item == "logo") AND ($titulo == "Home"))) {
   				$selected = "selected";
@@ -40,6 +38,13 @@
   			$menu_i_final = str_replace($this->placeholders, $this->placetakers, $this->template);
         $this->miolo .= $menu_i_final;
   		}
+    }
+    public function break_menu() {
+      global $preendereco;
+      global $titulo;
+      global $chars_quebrados;
+      global $chars_fixed;
+
     }
     function __destruct() {
       global $preendereco;

@@ -89,8 +89,8 @@
 	}
 	?>
 	<?php
-		$header = new HEADER(mobile);
-		$header -> break_menu();
-		$header = null;
+	$header = new HEADER($tipo); // $tipo pode ser mobile | relativo | fixo
+	// $header->mobile = FALSE; //Descomentar caso queira que o menu mobile não seja impresso.
+	$header = null;
 	?>
 	<div id="topo_espaco"> </div>
