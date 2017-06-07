@@ -21,28 +21,33 @@ CONSTRUÇÃO<br />
 <br />
 $header = new HEADER($tipo); // $tipo pode ser mobile | relativo | fixo<br />
 // $header->mobile = FALSE; //Descomentar caso queira que o menu mobile não seja impresso.<br />
+// $header->espacotopo = TRUE // Descomentar para colocar um espaço de compensação com o header fixo, caso seja necessário
 $header = null;<br />
-<br /><br />
-<hr />
-********* GALERIA<br />
-Como nomear/localizar as imagens:<br />
-images/DIRETORIO/galeria/TIPODEIMAGEM/NOMEDAIMAGEM.jpg<br />
-DIRETORIO: nome do diretório que a página se encontra<br />
-TIPODEIMAGEM: thumbs ou lightbox<br />
-NOMEDAIMAGEM: Pegar o nome original do item (da legenda) e fazer a limpeza dos caracteres. Tirar os acentos, deixar tudo minúsculas e substituir os espaços por _. Exemplo "Perspectiva artística do salão de festas" - > "perspectiva_artistica_do_salao_de_festas"<br />
+<br /><hr /><br />
+********* BANNER<br />
+Imagens devem ser colocadas em /images/banner/[$diretorio]/
+$banner = new BANNER($diretorio, $classe); # arg1: nome da pasta onde estão as imagens do banner; $classe é opciona: telatoda<br />
 <br />
-Legendas: Declarar um array com as legendas, na ordem que quer que apareçam<br />
+# Adiciona um slide. agr1: nome do arquivo, ja na pasta images/banner/[nome_do_folder_definido_no_inicio_da_classe]/[arg].jpg; arg2: legenda; arg3: link para clicar. não declarar caso não haja clique<br />
+$banner->bannerItem($arquivo, $legenda, $link);<br />
 <br />
-Declarar, depois, o objeto. exemplo:<br />
-$a = new GALERIA($lista)<br />
-Sendo $lista o array das legendas.<br />
-<br /><br />
+$banner = NULL;
+<br /><hr /><br />
+********* MAPA<br />
+Coordenadas do mapa no /includes/config.php
+$map = new MAPA();
+// $map->gerarLink("Meu Link"); // Para Gerar o link para o google. Alterar 'Meu Link' altera o label do link
+$map->mapButton('lanchonete', 'restaurante', 'padaria'); // Adicionar botões para pesquisa do google no mapa
+$map->geraFrame();
+include_once($preendereco.$map->initMap());
+
+<br /><hr /><br />
 ********* FOOTER<br />
 Para chamar:
 $footer = new FOOTER<br />
 Na pasta /templates/footer, adicione os arquivos que serão parte do footer.
 Até 5 arquivos serão reconhecidos e dividirão automaticamente o footer para comportá-los.
-<br /><br />
+<br /><hr /><br />
 ********* BOTOES DE CONVERSÃO<br />
 Para chamar:<br />
 $conv = new CONVERSAO($ESTILO$);<br />
@@ -65,3 +70,16 @@ $trigger$: nome da classe que sera aplicada no link<br />
 $path_final$:Caminho para qual o link sera direcionado<br />
 $imagem$: nome da imagem que sera usada no botao<br />
 $preendereco$: buscara a variavel preendereco
+********* GALERIA<br />
+Como nomear/localizar as imagens:<br />
+images/DIRETORIO/galeria/TIPODEIMAGEM/NOMEDAIMAGEM.jpg<br />
+DIRETORIO: nome do diretório que a página se encontra<br />
+TIPODEIMAGEM: thumbs ou lightbox<br />
+NOMEDAIMAGEM: Pegar o nome original do item (da legenda) e fazer a limpeza dos caracteres. Tirar os acentos, deixar tudo minúsculas e substituir os espaços por. Exemplo: "Perspectiva artística do salão de festas" - > "perspectiva_artistica_do_salao_de_festas"<br />
+<br />
+Legendas: Declarar um array com as legendas, na ordem que quer que apareçam<br />
+<br />
+Declarar, depois, o objeto. exemplo:<br />
+$a = new GALERIA($lista)<br />
+Sendo $lista o array das legendas.<br />
+<br /><hr /><br />
