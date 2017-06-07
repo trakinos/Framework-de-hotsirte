@@ -28,7 +28,7 @@ $header = null;<br />
 Imagens devem ser colocadas em /images/banner/[$diretorio]/
 $banner = new BANNER($diretorio, $classe); # arg1: nome da pasta onde estão as imagens do banner; $classe é opciona: telatoda<br />
 <br />
-# Adiciona um slide. agr1: nome do arquivo, ja na pasta images/banner/[nome_do_folder_definido_no_inicio_da_classe]/[arg].jpg; arg2: legenda; arg3: link para clicar. não declarar caso não haja clique<br />
+// Adiciona um slide. agr1: nome do arquivo, ja na pasta images/banner/[nome_do_folder_definido_no_inicio_da_classe]/[arg].jpg; arg2: legenda; arg3: link para clicar. não declarar caso não haja clique<br />
 $banner->bannerItem($arquivo, $legenda, $link);<br />
 <br />
 $banner = NULL;
